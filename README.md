@@ -3,6 +3,6 @@
 chmod +x run.sh && ./run.sh
 ```
 or follow 
-```FramePack.ipynb`` Notebook 
+```FramePack.ipynb``` Notebook 
 ## Credit:
 [FramePack](https://github.com/lllyasviel/FramePack)
