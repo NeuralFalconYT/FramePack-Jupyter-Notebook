@@ -46,6 +46,25 @@ pip install -r requirements.txt
 echo "🧠 Installing SageAttention..."
 pip install sageattention==1.0.6
 
-# Run the Gradio demo
+# Pause for user to review logs
+echo ""
+read -p "📋 Press Enter to clear the screen and select a demo..."
+
+# Clear terminal output
+clear
+
+# Prompt user to select which demo to run
+echo "🔧 Choose which demo to run:"
+echo "1. FramePack"
+echo "2. FramePack-F1"
+read -p "Enter 1 or 2: " choice
+
 echo "🚀 Launching Gradio demo..."
-python demo_gradio.py --share
+if [ "$choice" == "1" ]; then
+    python demo_gradio.py --share
+elif [ "$choice" == "2" ]; then
+    python demo_gradio_f1.py --share
+else
+    echo "❌ Invalid choice. Exiting."
+    exit 1
+fi
